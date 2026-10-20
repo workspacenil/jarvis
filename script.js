@@ -70,7 +70,7 @@ if ('webkitSpeechRecognition' in window) {
         console.log("User said: " + transcript);
 
         // Send transcript to backend
-        fetch('https://subside-impulse-showman.ngrok-free.dev/api/chat', {
+        fetch('http://localhost:8000/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: transcript })
